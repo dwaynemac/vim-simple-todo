@@ -1,13 +1,16 @@
-# Simple TODO in Vim
+# Simple TODO in Vim for Ruby code
+
+This is a fork vitalk's plugin with the only purpose of prefixing
+TODOs with "# TODO" so that it'll integrate easely on a Ruby project
 
 May be this is the smallest Vim plugin in the world. It adds some useful
 mappings for manage simple TODO lists (example below) and nothing more.
 
 ```
-[x] Create plugin
-[x] Add help documentation
-[x] Publish to GitHub
-[ ] Spread the word
+# TODO [x] Create plugin
+# TODO [x] Add help documentation
+# TODO [x] Publish to GitHub
+# TODO [ ] Spread the word
 ```
 
 Plugin supports [GitHub-like task lists](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments) as well.
@@ -23,13 +26,13 @@ Use your favorite installation method:
 
   ```sh
   cd .vim/bundle
-  git clone https://github.com/vitalk/vim-simple-todo
+  git clone https://github.com/dwaynemac/vim-simple-todo
   ```
 
 - Junegunn Choi's [Plug](https://github.com/junegunn/vim-plug) (recommend):
 
   ```vim
-  Plug 'vitalk/vim-simple-todo'
+  Plug 'dwaynemac/vim-simple-todo'
   ```
 
   ```sh
@@ -39,7 +42,7 @@ Use your favorite installation method:
 ## Usage
 
 All this mappings use the `<leader>` key and they work the same on `NORMAL`
-and `INSERT` modes. I prefer to use [the comma](https://github.com/vitalk/sanevi/blob/master/vimrc#L37)
+and `INSERT` modes. I prefer to use [the comma](https://github.com/dwaynemac/sanevi/blob/master/vimrc#L37)
 as the `<leader>` key but fell free to set your own.
 
 | Key           | Help                                   |
@@ -67,10 +70,10 @@ See `:help simple-todo-maps` for list of available <Plug> mappings.
 
 ## Issues
 
-Don't hesitate to open [GitHub Issues](https://github.com/vitalk/vim-simple-todo/issues) for any bug or suggestions.
+Don't hesitate to open [GitHub Issues](https://github.com/dwaynemac/vim-simple-todo/issues) for any bug or suggestions.
 
 ## Copyright
 
 Copyright © 2012 Vital Kudzelka. Use it for Good not Evil.
 
-Distributed under the [MIT license](http://mit-license.org/vitalk).
+Distributed under the [MIT license](http://mit-license.org/dwaynemac).
