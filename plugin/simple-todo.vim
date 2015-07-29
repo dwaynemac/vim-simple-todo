@@ -29,31 +29,31 @@ endfu " }}}
 " Public API {{{
 
 " Create a new item
-nnore <Plug>(simple-todo-new) i[ ]<space>
-inore <Plug>(simple-todo-new) [ ]<space>
+nnore <Plug>(simple-todo-new) i#<space>TODO<space>[ ]<space>
+inore <Plug>(simple-todo-new) #<space>TODO<space>[ ]<space>
 
 " Create a new item at the start of this line
-inore <Plug>(simple-todo-new-start-of-line) <Esc>mzI<c-r>=<SID>get_list_marker(line('.')-1)<cr>[ ]<space><Esc>`z4la
-nnore <Plug>(simple-todo-new-start-of-line) mzI<c-r>=<SID>get_list_marker(line('.')-1)<cr>[ ]<space><Esc>`z4l
-vnore <Plug>(simple-todo-new-start-of-line) I<c-r>=<SID>get_list_marker(line('.')-1)<cr>[ ]<space>
+inore <Plug>(simple-todo-new-start-of-line) <Esc>mzI<c-r>=<SID>get_list_marker(line('.')-1)<cr>#<space>TODO<space>[ ]<space><Esc>`z4la
+nnore <Plug>(simple-todo-new-start-of-line) mzI<c-r>=<SID>get_list_marker(line('.')-1)<cr>#<space>TODO<space>[ ]<space><Esc>`z4l
+vnore <Plug>(simple-todo-new-start-of-line) I<c-r>=<SID>get_list_marker(line('.')-1)<cr>#<space>TODO<space>[ ]<space>
 
 " Create a new item below
-nnore <Plug>(simple-todo-below) o<c-r>=<SID>get_list_marker(line('.')-1)<cr>[ ]<space>
-inore <Plug>(simple-todo-below) <Esc>o<c-r>=<SID>get_list_marker(line('.')-1)<cr>[ ]<space>
+nnore <Plug>(simple-todo-below) o<c-r>=<SID>get_list_marker(line('.')-1)<cr>#<space>TODO<space>[ ]<space>
+inore <Plug>(simple-todo-below) <Esc>o<c-r>=<SID>get_list_marker(line('.')-1)<cr>#<space>TODO<space>[ ]<space>
 
 " Create a new item above
-nnore <Plug>(simple-todo-above) O<c-r>=<SID>get_list_marker(line('.')+1)<cr>[ ]<space>
-inore <Plug>(simple-todo-above) <Esc>O<c-r>=<SID>get_list_marker(line('.')+1)<cr>[ ]<space>
+nnore <Plug>(simple-todo-above) O<c-r>=<SID>get_list_marker(line('.')+1)<cr>#<space>TODO<space>[ ]<space>
+inore <Plug>(simple-todo-above) <Esc>O<c-r>=<SID>get_list_marker(line('.')+1)<cr>#<space>TODO<space>[ ]<space>
 
 " Mark item under cursor as done
-nnore <Plug>(simple-todo-mark-as-done) :s/^\(\s*[-+*]\?\s*\)\[ \]/\1[x]/<cr>
-vnore <Plug>(simple-todo-mark-as-done) :s/^\(\s*[-+*]\?\s*\)\[ \]/\1[x]/<cr>
-inore <Plug>(simple-todo-mark-as-done) <Esc>:s/^\(\s*[-+*]\?\s*\)\[ \]/\1[x]/<cr>
+nnore <Plug>(simple-todo-mark-as-done) :s/^\(\s*#\sTODO\s[-+*]\?\s*\)\[ \]/\1[x]/<cr>
+vnore <Plug>(simple-todo-mark-as-done) :s/^\(\s*#\sTODO\s[-+*]\?\s*\)\[ \]/\1[x]/<cr>
+inore <Plug>(simple-todo-mark-as-done) <Esc>:s/^\(\s*#\sTODO\s[-+*]\?\s*\)\[ \]/\1[x]/<cr>
 
 " Mark as undone
-nnore <Plug>(simple-todo-mark-as-undone) :s/^\(\s*[-+*]\?\s*\)\[x\]/\1[ ]/<cr>
-vnore <Plug>(simple-todo-mark-as-undone) :s/^\(\s*[-+*]\?\s*\)\[x\]/\1[ ]/<cr>
-inore <Plug>(simple-todo-mark-as-undone) <Esc>:s/^\(\s*[-+*]\?\s*\)\[x\]/\1[ ]/<cr>
+nnore <Plug>(simple-todo-mark-as-undone) :s/^\(\s*#\sTODO\s[-+*]\?\s*\)\[x\]/\1[ ]/<cr>
+vnore <Plug>(simple-todo-mark-as-undone) :s/^\(\s*#\sTODO\s[-+*]\?\s*\)\[x\]/\1[ ]/<cr>
+inore <Plug>(simple-todo-mark-as-undone) <Esc>:s/^\(\s*#\sTODO\s[-+*]\?\s*\)\[x\]/\1[ ]/<cr>
 
 " }}}
 " Key bindings {{{
